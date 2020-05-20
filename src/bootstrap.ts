@@ -1,5 +1,6 @@
 import * as express from 'express'
 import * as helmet from 'helmet'
+import * as cors from 'cors'
 import { readFileSync } from 'fs'
 import Helpers from './helpers'
 
@@ -26,6 +27,7 @@ class Bootstrap {
 
   middlewares() {
     this.app.use(helmet())
+    this.app.use(cors());
   }
 }
 
