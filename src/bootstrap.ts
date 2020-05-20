@@ -9,6 +9,7 @@ class Bootstrap {
 
   constructor() {
     this.app = express()
+    this.middlewares()
     this.routes()
   }
 
@@ -27,7 +28,7 @@ class Bootstrap {
 
   middlewares() {
     this.app.use(helmet())
-    this.app.use(cors());
+    this.app.use(cors())
   }
 }
 
